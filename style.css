@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
+html {
+    background-color:#090a0f;
+ }
+
 :root {
     --bgColor: #223344;
     --bgColor2: #090a0f;
