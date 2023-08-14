@@ -88,10 +88,30 @@
       <a class="link" href="https://github.com/EasonC13" target="_blank">
         <i class="fab fa-github">&nbsp;</i>Github
       </a>
+      <div>
+        <button class="link" id="wechatlink" target="_blank">
+          <i class="fab fa-weixin">&nbsp;</i>WeChat
+        </button>
+        <script>
+          document
+            .getElementById("wechatlink")
+            .addEventListener("click", function () {
+              const textToCopy = "pricean01";
 
-      <a class="link" href="weixin://dl/add?pricean01" target="_blank">
-        <i class="fab fa-weixin">&nbsp;</i>WeChat
-      </a>
+              // Create a temporary textarea element to copy the text
+              const tempTextArea = document.createElement("textarea");
+              tempTextArea.value = textToCopy;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand("copy");
+              document.body.removeChild(tempTextArea);
+
+              // Show an alert to indicate that the text has been copied
+              alert("Eason's WeChat ID Copied: " + textToCopy);
+              window.open("weixin://dl/chat?pricean01", "_blank");
+            });
+        </script>
+      </div>
       <a class="link" href="http://line.me/ti/p/~pricean531" target="_blank">
         <i class="fab fa-line">&nbsp;</i>LINE
       </a>
